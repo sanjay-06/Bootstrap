@@ -1,0 +1,20 @@
+{
+  "name": "gittest",
+  "version": "1.0.0",
+  "description": "this is a tutorial",
+  "main": "index.html",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sanjay_06@bitbucket.org/sanjay_06/git-test.git"
+  },
+  "author": "sanjay",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/sanjay_06/git-test#readme"
+}
