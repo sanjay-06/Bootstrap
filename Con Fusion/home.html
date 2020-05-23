@@ -5,13 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ristorante Con Fusion</title>
      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="grid.css">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <style>
-        nav
-{
-    background-color:rgb(92, 0, 179);
-}
+     nav
+     {
+        background-color:rgb(92, 0, 179);
+     }
+     .row-header
+     {
+        margin:0px auto;
+        padding:0px;
+     }
+    .row-content
+     {
+        margin:0px auto;
+        padding: 50px 0px 50px 0px;
+        border-bottom: 1px ridge;
+        min-height:400px;
+     }
+    footer
+    {
+        background-color: #D1C4E9;
+        margin:0px auto;
+        padding: 20px 0px 20px 0px;
+    }
+    .jumbotron
+     {
+        padding:70px 30px 70px 30px;
+        margin:0px auto;
+        background: #9575CD ;
+        color:floralwhite;
+     }
+
+    address
+    {
+        font-size:80%;
+        margin:0px;
+        color:#0f0f0f;
+    }
+    .btn-warning
+    {
+        width: 180px;
+        padding:8px;
+    }
     </style>
     </head>
 <body>
@@ -32,7 +69,7 @@
                 </div>
             </div>            
         </div>
-    </nav>
+    </nav><br><br>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -40,15 +77,18 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-3 align-center" style="margin-top: 3%;margin-left: 6%;">
+                    <img src="img/logo.png" height="100px" width="133px">
+                </div>
+                <div class="col col-sm align-self-center">
+                    <button class="btn btn-warning"><a href="#reserve"  style="text-decoration: none;color: black;">Reserve Table</a></button>
                 </div>
             </div>
         </div>
     </header><br>
             <div class="container">
                 <div class="row row-content  align-items-center">
-                    <div class="col-12 col-sm-4  order-sm-last col-md-3"> 
+                    <div class="col-10 col-sm-3  order-sm-last col-md-2"> 
                         <h3>Our Lipsmacking Culinary Creations</h3>
                     </div>
                     <div class="col col-sm  order-sm-first col-md">
@@ -66,18 +106,23 @@
                     </div>
                 </div>
                 <div class="row row-content  align-items-center">
-                    <div class="col-12 col-sm-4 col-md-3">
+                    <div class="col-10 col-sm-4  order-sm-last col-md-3"> 
                         <h3>This Month's Promotions</h3>
                     </div>
-                        <div class="col col-sm  col-md">
-                            <h2>Weekend Grand Buffet</h2>
-                            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                        </div>
+                    <div class="col col-sm  order-sm-last col-md">
+                        <div class="media">
+                            <div class="media-body">
+                                <h2 class="mt-0">Weekend Grand Buffet  <span class="badge badge-danger">NEW</span></h2>
+                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            </div>
+                            <img class="d-flex mr-5 img-thumbnail order-sm-last"
+                            src="img/buffet.png" alt="buffet">
+                        </div>        
                     </div>
                 </div>
                 <div class="container">
                     <div class="row row-content align-items-center">
-                        <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                        <div class="col-12 col-sm-3 order-sm-last col-md-2">
                             <h3>Meet our Culinary Specialists</h3>
                         </div>
                         <div class="col col-sm  order-sm-first col-md">
@@ -97,7 +142,45 @@
                         </div>
                     </div>
                 </div>
-            </div><br><br>
+            </div><br>
+            <div class="col-10 col-sm-4"></div>
+            <div class="row row-content col-10 col-sm-5" id="reserve">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve A Table</h3>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <dt class="col-6 col-sm-2">Number of Guests</dt>
+                                    <dd class="col-12 col-sm align-center">
+                                    <input type="radio" value="1" name="guest" id="1"> <label for="guest">1</label>&emsp;
+                                    <input type="radio" value="2" name="guest" id="2"> <label for="guest">2</label>&emsp;
+                                    <input type="radio" value="3" name="guest" id="3"> <label for="guest">3</label>&emsp;
+                                    <input type="radio" value="4" name="guest" id="4"> <label for="guest">4</label>&emsp;
+                                    <input type="radio" value="5" name="guest" id="5"> <label for="guest">5</label>&emsp;
+                                    <input type="radio" value="6" name="guest" id="6"> <label for="guest">6</label>&emsp;
+                                    </dd>
+                                </div><br>
+                                <div class="row">
+                                    <dt class="col-11 col-sm-3 col-md-2">Date and Time</dt>
+                                    <div class="col col-sm-4">
+                                        <input type="text" class="form-control" id="Date" name="Date" placeholder="Date">
+                                    </div>
+                                    <div class="col col-sm-4">
+                                        <input type="text" class="form-control" id="Time" name="Time" placeholder="Time">
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col-6 col-md-4">
+                                        <input type="submit" class="btn btn-primary" value="Reserve">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="col col-sm"></div>
+            </div>
+
             <footer class="footer">
                 <div class="container">
                     <div class="row">             
@@ -123,7 +206,7 @@
                            </address>
                         </div>
                         <div class="col-12 col-sm-4 align-self-center">
-                            <div class="text-center">
+                            <div class="text-center"></div>
                                 <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
                                 <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
                                 <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
@@ -132,7 +215,7 @@
                                 <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                             </div>
                         </div>
-                   </div>
+                   </div><br>
                    <div class="row justify-content-center">             
                         <div class="col-auto">
                             <p>© Copyright 2018 Ristorante Con Fusion</p>
@@ -141,7 +224,7 @@
                 </div>
             </footer>
             <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>        
+            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         </body>
-</html>
+    </html>
